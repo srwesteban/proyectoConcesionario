@@ -134,6 +134,10 @@ img {
 .footer_widget_text {
   margin: 0;
 }
+.copy{
+    text-align: end ;
+    justify-items: flex-end;
+}
 
 /* responsive stuff */
 
@@ -148,12 +152,23 @@ img {
       margin-top: 1.5rem;
       
     }
+    img{
+        width: 400px;
+    }
   
     .content {
       align-items: center;
     }
+    .content_claim{
+        font-size: 32px;
+    }
   
     .footer__widget {
       margin-bottom: 1rem;
+    }
+    .copy{
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
   }
