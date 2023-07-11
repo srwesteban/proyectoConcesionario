@@ -1,6 +1,159 @@
-:root{
-
-    --max-width: 120px;
-    --min-width: 320px;
-    --accent-color: #00c3f0;
+:root {
+  --max-width: 1280px;
+  --min-width: 320px;
+  --accent-color: #00c3f0;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+img {
+  background-color: white;
+  width: 500px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: var(--min-width);
+  background-image: url(/img/background1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.7s ease-in-out;
+}
+.header,
+.content,
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: var(--max-width);
+}
+
+.header {
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu-list {
+  margin: 0;
+}
+
+.menu-list_item {
+  display: inline-block;
+  margin: 0.5rem;
+  font-size: 24px;
+}
+
+.menu-list_item:last-child {
+  margin-right: 0;
+}
+
+.book-apointment {
+  background-color: var(--accent-color);
+  padding: 1rem 2rem;
+  font-size: 24px;
+}
+
+/* content */
+
+.content {
+    max-width: var(--max-width);
+    flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+   
+}
+.slideButton{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    cursor: pointer;
+}
+.prevSlide{
+    left:-2rem;
+}
+.nextSlide{
+    right: -2rem;
+}
+.content_claim {
+  font-size: 64px;
+  color: var(--accent-color);
+  margin: 0;
+}
+.content_subclaim {
+  font-size: 32px;
+  margin: 0.5rem 0;
+  margin-bottom: 30px;
+}
+
+/* footer */
+
+.footer-wrapper {
+  background-color: black;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_widget {
+  font-size: 24px;
+}
+.footer_widget_title {
+  color: var(--accent-color);
+  margin: 0 0 1rem 0;
+}
+.footer_widget_text {
+  margin: 0;
+}
+
+/* responsive stuff */
+
+@media screen and (max-width: 1280px) {
+    .header,
+    .footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .menu {
+      margin-top: 1.5rem;
+      
+    }
+  
+    .content {
+      align-items: center;
+    }
+  
+    .footer__widget {
+      margin-bottom: 1rem;
+    }
+  }
